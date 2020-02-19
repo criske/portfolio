@@ -1,1 +1,91 @@
 /* You can add global styles to this file, and also import other style files */
+/**
+        * The primary color is the color displayed most frequently across your app’s screens and
+        * components.
+    */
+$primary: #3e2723;
+$primaryDark: darken($primary, 5%);
+/**
+        * The secondary color provides more ways to accent and distinguish your product.
+        * Secondary colors are best for:
+        * - Floating action buttons
+        * - Selection controls, like sliders and switches
+        * - Highlighting selected text
+        * - Progress bars
+        * - Links and headlines
+    */
+$secondary: #ffab00;
+$secondaryVariant: lighten($secondary, 5%);
+/**
+      * The background color appears behind scrollable content.
+      */
+$background: #f5f5f6;
+/**
+      * The surface color is used on surfaces of components, such as cards, sheets and menus.
+      */
+$surface: #e1e2e1;
+/**
+      * The error color is used to indicate error within components, such as text fields.
+      */
+$error: #ff1744;
+/**
+      * Color used for text and icons displayed on top of the primary color.
+      */
+$onPrimary: #ffffff;
+/**
+      * Color used for text and icons displayed on top of the secondary color.
+      */
+$onSecondary: #000000;
+/**
+      * Color used for text and icons displayed on top of the background color.
+      */
+$onBackground: #000000;
+/**
+      * Color used for text and icons displayed on top of the surface color.
+      */
+$onSurface: #000000;
+/**
+      * Color used for text and icons displayed on top of the error color.
+      */
+$onError: #ff1744;
+
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+
+body {
+  margin: 0;
+  font-family: "Roboto", "sans-serif";
+  font-size: 18px;
+  background-color: $background;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+header {
+  background: $primary;
+  padding: 1em 0;
+  a {
+    color: $onPrimary;
+    text-decoration: none;
+  }
+  a.logo {
+    font-weight: bold;
+    font-size: 24px;
+  }
+  nav {
+    float: right;
+    ul {
+      list-style: none;
+      margin: 0;
+      display: flex;
+      li a {
+        padding: 1em;
+        &:hover {
+          background: $primaryDark;
+        }
+      }
+    }
+  }
+}
